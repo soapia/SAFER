@@ -1,5 +1,6 @@
 html, body {
-  padding: 10px;
+  margin:0;
+/*   width: 100%; */
 }
 
 /* .border{
@@ -81,6 +82,7 @@ div.logo article p{
 }
 
 div.page{
+  padding: 10px;
   display: flex;
   justify-content: start;
 /*   align-items: center; */
@@ -145,7 +147,7 @@ nav a:hover{
 #content-container-register{
   background-color: white;
   border-radius: 20px;
-  height: 80vh;
+/*   height: 80vh; */
   width: 100%;
   margin: 20px;
   overflow-y:auto
@@ -153,7 +155,7 @@ nav a:hover{
 }
 
 #content{
-  padding: 5%;
+  padding: 0 5%;
   height: 85%;
   position: relative;
 }
@@ -166,15 +168,16 @@ nav a:hover{
 
 .big-letter {
   font-size: 34px;
+  line-height: 50px;
 }
 
 section{
   background-color: #ff4e55;
   padding: 10px 20px;
   border-radius: 20px;
-  margin: 10px 0px;
+  margin: 10px 10px 30px;
 /*   position: absolute; */
-  bottom: 5%;
+/*   bottom: 5%; */
 }
 
 section h4, section p{
@@ -187,7 +190,16 @@ section h4{
 }
 
 section p{
-  font-size: 18px !important;
+  font-size: 14px !important;
+  font-family: proxima-nova,sans-serif !important;
+font-weight: 600;
+font-style: italic;
+  letter-spacing: .5px;
+  line-height: 20px;
+}
+
+code{
+  font-size: 18px;
 }
 
 .info {
@@ -212,33 +224,24 @@ font-style: normal;
 
 h5 {
   text-decoration: underline;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .card-title{
   text-decoration: underline;
 }
 
+/* MAILCHIMP FORM */
+
 input[type=email]{
   border: none;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 0px;
   display: block;
   margin: 5px 0;
-}
-
-.mce_inline_error{
 font-family: decoy,serif;
 font-style: normal;
-    color: white;
-  background-color: #bf1212;
-  border-radius: 5px;
-  font-size: 10px;
-}
-
-h6 {
-  font-size: 14px;
-  margin: 0;
+border-bottom: 2px #272a3c solid;
 }
 
 input[type=submit]{
@@ -249,7 +252,61 @@ input[type=submit]{
   margin: 5px 0;
   font-family: decoy,serif;
 font-style: normal;
+  background-color: #272a3c;
+  color: white;
+}
+
+input:focus { 
+    outline: none !important;
+}
+
+#mc_embed_signup_scroll{
+   display: flex;
+/*   width: 60%; */
+  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
   background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  height: 100px;
+  
+}
+
+.mc-field-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  
+}
+
+/* Email Input Error */
+
+#mc_embed_signup div.mce_inline_error{
+font-family: decoy,serif;
+font-style: normal;
+  color: #ff4e55 !important;
+  border: none;
+  font-size: 10px;
+  background-color: white !important;
+  padding: 5px 10px !important;
+  margin: 0 !important;
+}
+
+.update {
+  color: #ff4e55;
+}
+
+
+h6 {
+  font-size: 14px;
+  margin: 0;
+}
+
+label{
+  font-size: 14px;
+  color: #26293d;
 }
 
 .wrap-collabsible {
@@ -347,6 +404,75 @@ input[type='checkbox'] {
   margin: 10px 2px;
 }
 
+.btn:hover{
+  background-color: #f5b2b7;
+  color: white;
+  transition: .2s;
+}
+
+
+/* CTA Stuff */
+
+.cta-details{
+    background-color: white;
+    padding: 30px;
+}
+
+div.cta-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+
+.cta-details h1{
+  display: block;
+  text-align: center;
+}
+
+.cta-list-option{
+  width: 100%;
+  min-height: 80px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: #adadad 2px 2px 6px;
+  padding: 10px;
+  margin:10px;
+}
+
+.cta-list-option:hover{
+transition: .2s;
+position: relative;
+top: .5px;
+left: .5px;
+box-shadow: #7d7d7d 1px 1px 3px;
+  
+  
+}
+
+.cta-list-option h2{
+  margin: 10px;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.cta-list-option-par{
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  display: none;
+}
+
+.show-hide-par{
+  display: block;
+}
+
+.open{
+  background-color: #ff4e55;
+  color: white;
+}
+
 
 
 /* Mobile Layout */
@@ -362,6 +488,7 @@ input[type='checkbox'] {
   }
   div.logo img {
     width: 100%;
+    max-width: 350px;
   }
 
   div.logo article{
@@ -386,7 +513,13 @@ input[type='checkbox'] {
 }
 
 section p{
-  font-size: 13px !important;
+  font-size: 14px !important;
+}
+
+section small{
+   font-family: proxima-nova,sans-serif !important;
+font-weight: 600;
+font-style: italic;
 }
 
   h1{
